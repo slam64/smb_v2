@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SMB 메인 : OK 캐쉬백</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,  user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="../css/smb_v2.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+<link rel="apple-touch-icon" href="touch.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+	<div class="txt-toggle-box">
+		<div class="txt-line">
+			<div class="add-inner-box">
+				<button type="button" class="loc-refresh">현재 위치 새로고침 버튼</button>
+			</div>
+			<p class="g-txt">
+				강서구 강서구청 사거리 주변<br>
+				<strong class="inner-bubble-wrap">
+					할인쿠폰
+					<span class="inner-bubbler active">현재 위치 ‘미사2동’ 주변으로 할인쿠폰 알림 받기</span><!-- 활성화 시 active 클래스 적용 -->
+				</strong>
+				알림을 받고 있어요!
+			</p>
+		</div>
+		<div class="toggle-line">
+			<input id="frm-toggle" class="frm-toggle frm-toggle-round" type="checkbox">
+			<label for="frm-toggle">toggle on/off</label>
+		</div>
+	</div>
+
+	<div class="loc-tit-box">
+		<button type="button">위치 아이콘 버튼</button>
+		<h1>강서구청 사거리 주변</h1>
+	</div>
+
+	<!-- swiper : event banner -->
+	<div class="swiper-container evt-banner">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="javascript:void(0" class="img-box"><img src="../images/@banner.png" alt="배너 이미지 영역 #1"></a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:void(0" class="img-box"><img src="../images/@banner.png" alt="배너 이미지 영역 #2"></a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:void(0" class="img-box"><img src="../images/@banner.png" alt="배너 이미지 영역 #3"></a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:void(0" class="img-box"><img src="../images/@banner.png" alt="배너 이미지 영역 #4"></a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:void(0" class="img-box"><img src="../images/@banner.png" alt="배너 이미지 영역 #5"></a>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<!--// swiper : event banner -->
+	<hr class="horz-line">
+
+	<div class="m-tit-box">
+		<h2>쿠폰 먼저 챙기세요!</h2>
+		<a href="javascript:void(0)" class="sub-link">받은 쿠폰</a>
+	</div>
+	<!-- swiper : authentication type coupon -->
+	<div class="swiper-container auth-coupon">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb" style="background-image:url('../images/@thumb01.png')">썸네일 이미지 영역</span>
+					<strong class="m-tit">온더보더 온더보더 온더보더 온더보더 온더보더 온더보더</strong>
+					<span class="s-txt">코엑스 도심공항점 코엑스 도심공항점 코엑스 도심공항점 코엑스 도심공항점</span>
+					<span class="acc-wrap">
+						<span class="acc-txt">방문포장 1,000원 할인방문포장 1,000원 할인방문포장 1,000원 할인</span>
+					</span>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb" style="background-image:url('../images/@thumb01.png')">썸네일 이미지 영역</span>
+					<strong class="m-tit">온더보더</strong>
+					<span class="s-txt">코엑스 도심공항점</span>
+					<span class="acc-wrap">
+						<span class="acc-txt">밀크티 1,000원 할인</span>
+					</span>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb" style="background-image:url('../images/@thumb01.png')">썸네일 이미지 영역</span>
+					<strong class="m-tit">온더보더</strong>
+					<span class="s-txt">코엑스 도심공항점</span>
+					<span class="acc-wrap">
+						<span class="acc-txt">음료 1,000원 할인</span>
+					</span>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb" style="background-image:url('../images/@thumb01.png')">썸네일 이미지 영역</span>
+					<strong class="m-tit">온더보더</strong>
+					<span class="s-txt">코엑스 도심공항점</span>
+					<span class="acc-wrap">
+						<span class="acc-txt">방문포장 1,000원 할인</span>
+					</span>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb" style="background-image:url('../images/@thumb01.png')">썸네일 이미지 영역</span>
+					<strong class="m-tit">온더보더</strong>
+					<span class="s-txt">코엑스 도심공항점</span>
+					<span class="acc-wrap">
+						<span class="acc-txt">방문포장 1,000원 할인</span>
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!--// swiper : authentication type coupon -->
+	<hr class="horz-line">
+
+	<div class="m-tit-box">
+		<h2>쉽게 찾아보는 핫플!</h2>
+	</div>
+	<!-- swiper : tab category navigation -->
+	<div class="swiper-container tab-cate-nav">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><button type="button" class="active">전체</button></div>
+			<div class="swiper-slide"><button type="button">맛집</button></div><!-- 활성화 시 button 태그에 active 클래스 적용 -->
+			<div class="swiper-slide"><button type="button">카페 · 디저트</button></div>
+			<div class="swiper-slide"><button type="button">뷰티 · 패션</button></div>
+			<div class="swiper-slide"><button type="button">생활 · 건강</button></div>
+			<div class="swiper-slide"><button type="button">교육</button></div>
+			<div class="swiper-slide"><button type="button">기타</button></div>
+		</div>
+	</div>
+	<!--// swiper : tab category navigation -->
+
+	<div class="sort-block-box">
+		<select class="sel-kinds">
+			<option selected="selected">한식</option>
+			<option>일식</option>
+			<option>중식</option>
+			<option>양식</option>
+			<option>분식</option>
+			<option>세계음식</option>
+		</select>
+		<div class="dt-condi-box">
+			<span class="item"><button type="button" class="active">가까운 순</button></span><!-- 활성화 시 button 태그에 active 클래스 적용 -->
+			<span class="item"><button type="button">최신순</button></span>
+		</div>
+	</div>
+
+	<!-- 탭 카테고리 컨텐츠 : 전체 -->
+	<div class="tab-cate-cont active"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<ul class="store-list">
+			<li>
+				<div class="store-info-box on-delivery"><!-- 배달 버튼이 있는 경우엔 on-delivery 클래스 적용 -->
+					<a href="javascript:void(0)" class="inner-link-wrap">
+						<span class="tit"><img src="../images/ico_new.png" alt="new" class="ico"><span class="inner-txt">낙낙한 식당</span><em>340m</em></span>
+						<span class="txt-line">낙지볶음요리 전문점</span>
+						<span class="thumb-line" style="background-image:url('../images/@thumb02.png')">썸네일 이미지 영역</span>
+					</a>
+					<button type="button" class="btn-call" onclick="alert('배달 호출')">배달하기 버튼</button>
+				</div>
+			</li>
+			<li>
+				<div class="store-info-box">
+					<a href="javascript:void(0)" class="inner-link-wrap">
+						<span class="tit"><img src="../images/ico_new.png" alt="new" class="ico"><span class="inner-txt">낙낙한 식당 낙낙한 식당</span><em>340m</em></span>
+						<span class="txt-line">낙지볶음요리 전문점 낙지볶음요리 전문점낙지볶음요리 전문점낙지볶음요리 전문점</span>
+						<span class="thumb-line">썸네일 이미지 영역</span>
+					</a>
+				</div>
+				<!-- swiper : inner coupon download box -->
+				<div class="swiper-container inner-cp-box">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시 메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">5% 할인 쿠폰</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">2만원 상당 맞춤 진행 2만원 상당 맞춤 진행 2만원 상당 맞춤 진행</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">음료 1개 선택 가능</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!--// swiper : inner coupon download box -->
+			</li>
+			<li>
+				<div class="store-info-box on-delivery"><!-- 배달 버튼이 있는 경우엔 on-delivery 클래스 적용 -->
+					<a href="javascript:void(0)" class="inner-link-wrap">
+						<span class="tit"><img src="../images/ico_new.png" alt="new" class="ico"><span class="inner-txt">낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당</span><em>340m</em></span>
+						<span class="txt-line">낙지볶음요리 전문점 낙지볶음요리 전문점낙지볶음요리 전문점낙지볶음요리 전문점</span>
+						<span class="thumb-line">썸네일 이미지 영역</span>
+					</a>
+					<button type="button" class="btn-call" onclick="alert('배달 호출')">배달하기 버튼</button>
+				</div>
+				<!-- swiper : inner coupon download box -->
+				<div class="swiper-container inner-cp-box">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시 메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">5% 할인 쿠폰</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!--// swiper : inner coupon download box -->
+			</li>
+		</ul>
+	</div>
+	<!--// 탭 카테고리 컨텐츠 : 전체 -->
+
+	<!-- 탭 카테고리 컨텐츠 : 맛집 -->
+	<div class="tab-cate-cont"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<ul class="store-list">
+			<li>
+				<div class="store-info-box">
+					<a href="javascript:void(0)" class="inner-link-wrap">
+						<span class="tit"><span class="inner-txt">낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당</span><em>340m</em></span>
+						<span class="txt-line">낙지볶음요리 전문점 낙지볶음요리 전문점낙지볶음요리 전문점낙지볶음요리 전문점</span>
+						<span class="thumb-line">썸네일 이미지 영역</span>
+					</a>
+				</div>
+				<!-- swiper : inner coupon download box -->
+				<div class="swiper-container inner-cp-box">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시 메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">5% 할인 쿠폰</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">2만원 상당 맞춤 진행 2만원 상당 맞춤 진행 2만원 상당 맞춤 진행</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">음료 1개 선택 가능</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!--// swiper : inner coupon download box -->
+			</li>
+		</ul>
+	</div>
+	<!--// 탭 카테고리 컨텐츠 : 맛집 -->
+
+	<!-- 탭 카테고리 컨텐츠 : 카페 · 디저트 -->
+	<div class="tab-cate-cont"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<ul class="store-list">
+			<li>
+				<div class="store-info-box">
+					<a href="javascript:void(0)" class="inner-link-wrap">
+						<span class="tit"><span class="inner-txt">낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당</span><em>340m</em></span>
+						<span class="txt-line">낙지볶음요리 전문점 낙지볶음요리 전문점낙지볶음요리 전문점낙지볶음요리 전문점</span>
+						<span class="thumb-line">썸네일 이미지 영역</span>
+					</a>
+				</div>
+				<!-- swiper : inner coupon download box -->
+				<div class="swiper-container inner-cp-box">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시 메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">5% 할인 쿠폰</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">2만원 상당 맞춤 진행 2만원 상당 맞춤 진행 2만원 상당 맞춤 진행</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">음료 1개 선택 가능</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!--// swiper : inner coupon download box -->
+			</li>
+		</ul>
+	</div>
+	<!--// 탭 카테고리 컨텐츠 : 카페 · 디저트 -->
+
+	<!-- 탭 카테고리 컨텐츠 : 뷰티 · 패션 -->
+	<div class="tab-cate-cont"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<ul class="store-list">
+			<li>
+				<div class="store-info-box">
+					<a href="javascript:void(0)" class="inner-link-wrap">
+						<span class="tit"><span class="inner-txt">낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당</span><em>340m</em></span>
+						<span class="txt-line">낙지볶음요리 전문점 낙지볶음요리 전문점낙지볶음요리 전문점낙지볶음요리 전문점</span>
+						<span class="thumb-line">썸네일 이미지 영역</span>
+					</a>
+				</div>
+				<!-- swiper : inner coupon download box -->
+				<div class="swiper-container inner-cp-box">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시 메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">5% 할인 쿠폰</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">2만원 상당 맞춤 진행 2만원 상당 맞춤 진행 2만원 상당 맞춤 진행</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">음료 1개 선택 가능</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!--// swiper : inner coupon download box -->
+			</li>
+		</ul>
+	</div>
+	<!--// 탭 카테고리 컨텐츠 : 뷰티 · 패션 -->
+
+	<!-- 탭 카테고리 컨텐츠 : 생활 · 건강 -->
+	<div class="tab-cate-cont"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<ul class="store-list">
+			<li>
+				<div class="store-info-box">
+					<a href="javascript:void(0)" class="inner-link-wrap">
+						<span class="tit"><span class="inner-txt">낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당</span><em>340m</em></span>
+						<span class="txt-line">낙지볶음요리 전문점 낙지볶음요리 전문점낙지볶음요리 전문점낙지볶음요리 전문점</span>
+						<span class="thumb-line">썸네일 이미지 영역</span>
+					</a>
+				</div>
+				<!-- swiper : inner coupon download box -->
+				<div class="swiper-container inner-cp-box">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시 메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">5% 할인 쿠폰</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">2만원 상당 맞춤 진행 2만원 상당 맞춤 진행 2만원 상당 맞춤 진행</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">음료 1개 선택 가능</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!--// swiper : inner coupon download box -->
+			</li>
+		</ul>
+	</div>
+	<!--// 탭 카테고리 컨텐츠 : 생활 · 건강 -->
+
+	<!-- 탭 카테고리 컨텐츠 : 교육 -->
+	<div class="tab-cate-cont"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<ul class="store-list">
+			<li>
+				<div class="store-info-box">
+					<a href="javascript:void(0)" class="inner-link-wrap">
+						<span class="tit"><span class="inner-txt">낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당</span><em>340m</em></span>
+						<span class="txt-line">낙지볶음요리 전문점 낙지볶음요리 전문점낙지볶음요리 전문점낙지볶음요리 전문점</span>
+						<span class="thumb-line">썸네일 이미지 영역</span>
+					</a>
+				</div>
+				<!-- swiper : inner coupon download box -->
+				<div class="swiper-container inner-cp-box">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시 메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">5% 할인 쿠폰</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">2만원 상당 맞춤 진행 2만원 상당 맞춤 진행 2만원 상당 맞춤 진행</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">음료 1개 선택 가능</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!--// swiper : inner coupon download box -->
+			</li>
+		</ul>
+	</div>
+	<!--// 탭 카테고리 컨텐츠 : 교육 -->
+
+	<!-- 탭 카테고리 컨텐츠 : 기타 -->
+	<div class="tab-cate-cont"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<ul class="store-list">
+			<li>
+				<div class="store-info-box">
+					<a href="javascript:void(0)" class="inner-link-wrap">
+						<span class="tit"><span class="inner-txt">낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당 낙낙한 식당</span><em>340m</em></span>
+						<span class="txt-line">낙지볶음요리 전문점 낙지볶음요리 전문점낙지볶음요리 전문점낙지볶음요리 전문점</span>
+						<span class="thumb-line">썸네일 이미지 영역</span>
+					</a>
+				</div>
+				<!-- swiper : inner coupon download box -->
+				<div class="swiper-container inner-cp-box">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시 메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">5% 할인 쿠폰</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">2만원 상당 맞춤 진행 2만원 상당 맞춤 진행 2만원 상당 맞춤 진행</span>
+								<span class="s-txt">2022년 01월 31일까지</span>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button type="button" class="inner-link-wrap">
+								<span class="m-tit">메인 메뉴 4인 이상 주문시</span>
+								<span class="s-tit">음료 1개 선택 가능</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!--// swiper : inner coupon download box -->
+			</li>
+		</ul>
+	</div>
+	<!--// 탭 카테고리 컨텐츠 : 기타 -->
+
+	<div class="more-block-box">
+		<button type="button"><span>더보기</span></button>
+	</div>
+	<hr class="horz-line">
+
+	<div class="m-tit-box">
+		<h2>브랜드 쿠폰도 있어요!</h2>
+	</div>
+	<!-- swiper : brand category navigation -->
+	<div class="swiper-container brand-cate-nav">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><button type="button" class="active">크리스피크림 도넛 서현점</button></div><!-- 활성화 시 button 태그에 active 클래스 적용 -->
+			<div class="swiper-slide"><button type="button">버거킹 판교점</button></div>
+			<div class="swiper-slide"><button type="button">맥도널드 압구정점</button></div>
+		</div>
+	</div>
+	<!--// swiper : brand category navigation -->
+
+	<!-- 첫 번째 탭 컨텐츠 영역 -->
+	<div class="tab-cate-cont active"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<ul class="by-col-list">
+			<li>
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb"><img src="../images/@thumb03.png" alt="브랜드 쿠폰 이미지 영역"></span>
+					<span class="m-tit">복받아랑 더블더즌 2팩 매장전용 (6,500→5,200)</span>
+					<span class="s-txt"><strong class="dc">20%</strong></span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb"><img src="../images/@thumb03.png" alt="브랜드 쿠폰 이미지 영역"></span>
+					<span class="m-tit">복받아랑 더블더즌 2팩 매장전용 (6,500→5,200)</span>
+					<span class="s-txt"><strong class="dc">20%</strong></span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb"><img src="../images/@thumb03.png" alt="브랜드 쿠폰 이미지 영역"></span>
+					<span class="m-tit">복받아랑 더블더즌 2팩 매장전용 (6,500→5,200)</span>
+					<span class="s-txt"><strong class="dc">20%</strong></span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb"><img src="../images/@thumb03.png" alt="브랜드 쿠폰 이미지 영역"></span>
+					<span class="m-tit">복받아랑 더블더즌 2팩 매장전용 (6,500→5,200)</span>
+					<span class="s-txt"><strong class="dc">20%</strong></span>
+				</a>
+			</li>
+		</ul>
+		<div class="more-block-box">
+			<button type="button"><span>더보기</span></button>
+		</div>
+	</div>
+	<!--// 첫 번째 탭 컨텐츠 영역 -->
+
+	<!-- 두 번째 탭 컨텐츠 영역 -->
+	<div class="tab-cate-cont"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<ul class="by-col-list">
+			<li>
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="thumb"><img src="../images/@thumb03.png" alt="브랜드 쿠폰 이미지 영역"></span>
+					<span class="m-tit">복받아랑 더블더즌 2팩 매장전용 (6,500→5,200)</span>
+					<span class="s-txt"><strong class="dc">20%</strong></span>
+				</a>
+			</li>
+		</ul>
+		<div class="more-block-box">
+			<button type="button"><span>더보기</span></button>
+		</div>
+	</div>
+	<!--// 두 번째 탭 컨텐츠 영역 -->
+
+	<!-- 세 번째 탭 컨텐츠 영역 -->
+	<div class="tab-cate-cont"><!-- 컨텐츠 활성화 시 active 클래스 추가 -->
+		<div class="msg-box">
+			<p>주변에 등록된 쿠폰이 없어요.</p>
+		</div>
+	</div>
+	<!--// 세 번째 탭 컨텐츠 영역 -->
+	<hr class="horz-line">
+
+	<div class="m-tit-box">
+		<h2>주변소식 보고 포인트 챙기세요!</h2>
+	</div>
+	<div class="by-row-box">
+		<div class="row">
+			<div class="inner-pamphlet-box">
+				<a href="javascript:void(0)" class="thumb-box" style="background-image:url('../images/@thumb04.png')">
+					<span class="point">3P</span>
+				</a>
+			</div>
+			<div class="inner-store-box">
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="tit"><span class="inner-txt">낭만공작소</span><em>340m</em></span>
+					<span class="txt-line">달달한 와플이 맛있는 곳!</span>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="inner-pamphlet-box">
+				<a href="javascript:void(0)" class="thumb-box" style="background-image:url('../images/@thumb04.png')">
+					<span class="point">3P</span>
+				</a>
+			</div>
+			<div class="inner-store-box">
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="tit"><span class="inner-txt">낭만공작소낭만공작소낭만공작소낭만공작소낭만공작소</span><em>340m</em></span>
+					<span class="txt-line">달달한 와플이 맛있는 곳!달달한 와플이 맛있는 곳!달달한 와플이 맛있는 곳!달달한 와플이 맛있는 곳!달달한 와플이 맛있는 곳!</span>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="inner-pamphlet-box">
+				<a href="javascript:void(0)" class="thumb-box" style="background-image:url('../images/@thumb04.png')">
+					<span class="point">3P</span>
+				</a>
+			</div>
+			<div class="inner-store-box">
+				<a href="javascript:void(0)" class="inner-link-wrap">
+					<span class="tit"><span class="inner-txt">낭만공작소낭만공작소낭만공작소낭만공작소낭만공작소</span><em>340m</em></span>
+					<span class="txt-line">달달한 와플이 맛있는 곳!달달한 와플이 맛있는 곳!달달한 와플이 맛있는 곳!달달한 와플이 맛있는 곳!달달한 와플이 맛있는 곳!</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="more-block-box">
+		<button type="button"><span>더보기</span></button>
+	</div>
+	<hr class="horz-line">
+
+	<div class="foot-box">
+		<ul>
+			<li><a href="javascript:void(0)">제 3자 제공동의 철회 안내</a></li>
+			<li><a href="javascript:void(0)">쿠폰 사용방법</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- loading box 
+<div class="loading-box">
+	<img src="../images/img_loading.gif" alt="로딩 이미지 영역">
+</div>
+--// loading box -->
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+var evtSwiper = new Swiper('.evt-banner', {
+	resistanceRatio: 0,
+	pagination: {
+		el: '.swiper-pagination',
+	},
+});
+var authSwiper = new Swiper('.auth-coupon', {
+	slidesPerView: 'auto',
+	freeMode: true,
+	resistanceRatio: 0,
+});
+var tabSwiper = new Swiper('.tab-cate-nav', {
+	slidesPerView: 'auto',
+	freeMode: true,
+	resistanceRatio: 0,
+});
+var innerCpSwiper = new Swiper('.inner-cp-box', {
+	slidesPerView: 'auto',
+	freeMode: true,
+	resistanceRatio: 0,
+});
+var brSwiper = new Swiper('.brand-cate-nav', {
+	slidesPerView: 'auto',
+	freeMode: true,
+	resistanceRatio: 0,
+});
+</script>
+
+</body>
+</html>
